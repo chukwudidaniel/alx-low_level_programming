@@ -16,11 +16,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int carry = 0;
 
 	while (n1[len1])
-	len1++;
+		len1++;
 	while (n2[len2])
 		len2++;
 
-	if (len1 >= size_r || len2 >= size_r)
+	if (len1 >= size_r - 1 || len2 >= size_r - 1)
 		return (0);
 
 	i = len1 - 1;
@@ -33,8 +33,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		int digit2 = (j >= 0) ? n2[j] - '0' : 0;
 		int sum = digit1 + digit2 + carry;
 
-	if (k >= size_r - 1)
-		return (0);
+		if (k >= size_r - 1)
+			return (0);
 
 		r[k] = (sum % 10) + '0';
 		carry = sum / 10;
