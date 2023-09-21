@@ -2,30 +2,24 @@
 /**
  * rot13 - Encodes a string using ROT13.
  * @str: The input string to be encoded.
- * Return: A pointer to the resulting ROT13-encoded string.
+ * Return: Resulting ROT13-encoded string.
  */
 char *rot13(char *str)
 {
-	char *p = str; /* p = input */
-	char *t = str; /* t = output */
-	char rot13_table[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int i, j;
+	char c[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char d[] = "NOPQRSTUVWZYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (*p)
+	for (i = 0; str[i] != '\0'; j++)
 	{
-		char c = *p;
-
-		if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		for (j = 0; c[j] != '\0'; j++)
 		{
-			*t = rot13_table[c - ((c >= 'a' && c <= 'z') ? 'a' : 'A')];
+			if (str[i] == c[j])
+			{
+				str[i] = d[j];
+				break;
+			}
 		}
-		else
-		{
-			*t = c;
-		}
-		p++;
-		t++;
 	}
-	*t = '\0';
-
 	return (str);
 }
