@@ -4,7 +4,6 @@
  * _strcat - Concatenates two strings.
  * @dest: The destination string.
  * @src: The source string.
- *
  * Description: This function appends the src string to the dest string,
  * overwriting the terminating null byte ('\0') at the end of dest, and then
  * adds a terminating null byte.
