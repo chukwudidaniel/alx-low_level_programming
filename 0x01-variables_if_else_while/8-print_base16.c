@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - Main entry
+ * main - Entry point
  * Description: Printing all base 16 numbers
- * return: Always 0
+ * Return: Always 0
  */
 int main(void)
 {
