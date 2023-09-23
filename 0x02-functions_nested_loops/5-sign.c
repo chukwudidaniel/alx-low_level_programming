@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_sign - Printys sum
+ * print_sign - Print sign of numbers
  * @n: The nmber
- * Return: 1 for all
+ * Return: Return 1 or 0, as the case may be
  */
 int print_sign(int n)
 {
