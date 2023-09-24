@@ -1,12 +1,9 @@
 #include <stdio.h>
 
-
 /**
-  * main - Entry point 
-  * less than 4000000.
-  * Return: 0.
-  */
-
+ * main - Entry point.
+ * Return: 0.
+ */
 
 int main(void)
 {
