@@ -3,7 +3,6 @@
 /**
  * print_times_table - prints the time table for n from 0
  * @n: the number of interest
- * Return: always 0
  */
 
 void print_times_table(int n)
@@ -13,9 +12,11 @@ void print_times_table(int n)
 		return;
 	}
 
-	for (int i = 0; i <= n; i++)
+	int i, j;
+
+	for (i = 0; i <= n; i++)
 	{
-		for (int j = 0; j <= n; j++)
+		for (j = 0; j <= n; j++)
 		{
 			int result = i * j;
 
@@ -36,6 +37,7 @@ void print_times_table(int n)
  * main - Entry point of the program
  * Return: 0 on success
  */
+
 int main(void)
 {
 	int n = 12;
