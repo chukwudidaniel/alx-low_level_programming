@@ -1,29 +1,27 @@
 #include <stdio.h>
 
+
 /**
- * main - Entry point
- * Return: Always 0
- */
+  * main - Entry point 
+  * less than 4000000.
+  * Return: 0.
+  */
+
+
 int main(void)
 {
-	int fib1 = 1, fib2 = 2, sum = 0;
+	int i = 0;
+	long j = 1, k = 2, sum = k;
 
-	while (fib2 <= 4000000)
+
+	while (k + j < 4000000)
 	{
-		/* Check if fib2 is even */
-		if (fib2 % 2 == 0)
-		{
-			sum += fib2;
-		}
-
-/* Calculate the next Fibonacci number */
-	int temp = fib2;
-
-	fib2 = fib1 + fib2;
-	fib1 = temp;
+		k += j;
+		if (k % 2 == 0)
+		sum += k;
+		j = k - j;
+		++i;
 	}
-
-	printf("The sum of even Fibonacci terms is: %d\n", sum);
-
+	printf("%ld", sum);
 	return (0);
 }
