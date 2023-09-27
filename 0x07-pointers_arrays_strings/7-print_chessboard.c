@@ -1,3 +1,4 @@
+#include <stdio>
 #include "main.h"
 /**
  * print_chessboard - Prints chessboard
